@@ -2,9 +2,7 @@ import Head from 'next/head';
 import styles from '../styles/layout.module.css';
 
 import utilStyles from '../styles/utils.module.css';
-import Link from 'next/link';
-import Navbar from '../components/Navbar';
-import TemporaryDrawer from './drawer';
+
 
 
 
