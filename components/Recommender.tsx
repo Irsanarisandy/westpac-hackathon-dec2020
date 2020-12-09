@@ -1,4 +1,3 @@
-// @ts-ignore
 import React, { useContext } from 'react';
 import { UserContext } from '../contexts/user.context';
 
@@ -30,9 +29,6 @@ export default function Recommender() {
       <Typography variant="h3" component="h2">
         Recommender
       </Typography>
-      {/* <Typography className={classes.pos} color="textSecondary">
-        some bullshit sits here
-      </Typography> */}
       <ul className={classes.bullet}>
         {
           // @ts-ignore

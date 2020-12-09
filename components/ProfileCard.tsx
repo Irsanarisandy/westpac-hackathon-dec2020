@@ -1,4 +1,3 @@
-// @ts-ignore
 import React, { useContext } from 'react';
 import { UserContext } from '../contexts/user.context';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
@@ -8,9 +7,7 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import IconButton from '@material-ui/core/IconButton';
-import TextField from '@material-ui/core/TextField';
 import SearchIcon from '@material-ui/icons/Search';
-import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 

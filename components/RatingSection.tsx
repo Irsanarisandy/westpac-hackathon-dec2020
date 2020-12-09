@@ -33,9 +33,15 @@ export default function RatingSection() {
         <LinearProgressWithLabel
           className={classes.ratingProgress}
           variant="determinate"
+          // @ts-ignore
           value={user.rating[0].data.A * 100}
         />
-        <span>{user.rating[0].data.A * 100}%</span>
+        <span>
+          {
+            // @ts-ignore
+            user.rating[0].data.A * 100
+          }%
+        </span>
       </div>
 
       <span>credit score</span>
@@ -43,36 +49,60 @@ export default function RatingSection() {
         <LinearProgressWithLabel
           className={classes.ratingProgress}
           variant="determinate"
+          // @ts-ignore
           value={user.rating[0].data.B * 100}
         />
-        <span>{user.rating[0].data.B * 100}%</span>
+        <span>
+          {
+            // @ts-ignore
+            user.rating[0].data.B * 100
+          }%
+        </span>
       </div>
       <span>loyalty points</span>
       <div className={classes.ratings}>
         <LinearProgressWithLabel
           className={classes.ratingProgress}
           variant="determinate"
+          // @ts-ignore
           value={user.rating[0].data.C * 100}
         />
-        <span>{user.rating[0].data.C * 100}%</span>
+        <span>
+          {
+            // @ts-ignore
+            user.rating[0].data.C * 100
+          }%
+        </span>
       </div>
       <span>net saving</span>
       <div className={classes.ratings}>
         <LinearProgressWithLabel
           className={classes.ratingProgress}
           variant="determinate"
+          // @ts-ignore
           value={user.rating[0].data.D * 100}
         />
-        <span>{user.rating[0].data.D * 100}%</span>
+        <span>
+          {
+            // @ts-ignore
+            user.rating[0].data.D * 100
+          }%
+        </span>
       </div>
       <span>frequent user</span>
       <div className={classes.ratings}>
         <LinearProgressWithLabel
           className={classes.ratingProgress}
           variant="determinate"
+          // @ts-ignore
           value={user.rating[0].data.E * 100}
         />
-        <span>{user.rating[0].data.E * 100}%</span>
+        <span>
+          {
+            // @ts-ignore
+            user.rating[0].data.E * 100
+          }%
+        </span>
       </div>
     </div>
   );
