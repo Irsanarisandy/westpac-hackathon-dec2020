@@ -43,7 +43,6 @@ export default function Dashboard() {
             <Chart/>
           </div>
         </Grid>
-
         <Grid item xs={7}>
           <div className={classes.content}>
             <RatingSection />

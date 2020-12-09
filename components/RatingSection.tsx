@@ -25,7 +25,6 @@ export default function RatingSection() {
 
   return (
     <div className={classes.ratingSection}>
-
       <span>Pizza Hut</span>
       <div className={classes.ratings}>
         <LinearProgressWithLabel

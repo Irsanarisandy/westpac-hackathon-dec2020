@@ -34,6 +34,7 @@ export default function Recommender() {
       </Typography>
       <ul className={classes.bullet}>
         {
+          // @ts-ignore
           user.recommender.map((recom, idx) =>
             <li key={idx}>
               {recom}

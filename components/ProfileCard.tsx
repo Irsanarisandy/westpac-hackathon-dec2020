@@ -22,10 +22,13 @@ const useStyles = makeStyles((theme: Theme) =>
       maxWidth: 300,
     },
     searchArea: {
-      display: 'block',
+      display: 'flex',
       marginTop: 5,
       marginBottom: 15,
       paddingLeft: 10
+    },
+    selectEmpty: {
+      width: '100%'
     },
     searchField: {
       width: '100%'
@@ -39,10 +42,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     mediaName: {
       margin: 0,
-    },
-    selectEmpty: {
-      marginTop: theme.spacing(2),
-    },
+    }
   })
 );
 
@@ -51,22 +51,21 @@ export default function ProfileCard() {
   const [user, setUser] = useContext(UserContext);
 
   const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
+    // @ts-ignore
     setUser(Users[event.target.value])
   };
 
   return (
     <Card className={classes.root}>
-
       <div className={classes.searchArea}>
-        {/* <InputLabel id="demo-simple-select-label">User</InputLabel> */}
         <Select
           className={classes.selectEmpty}
           labelId="Client-Id"
           id="clienId"
+          // @ts-ignore
           value={user.id-1}
           onChange={handleChange}
           inputProps={{ 'aria-label': 'Without label' }}
-
         >
           <MenuItem value="" disabled>
             Select User
@@ -75,19 +74,29 @@ export default function ProfileCard() {
           <MenuItem value={1}>User 2</MenuItem>
           <MenuItem value={2}>User 3</MenuItem>
         </Select>
-        {/* <TextField className={classes.searchField} label="Search Name" /> */}
         <IconButton aria-label="menu">
           <SearchIcon />
         </IconButton>
       </div>
       <CardMedia
         className={classes.media}
+        // @ts-ignore
         image={user.image}
         title="Profile image"
       />
       <CardContent className={classes.mediaDesc}>
-        <h1 className={classes.mediaName}>{user.name}</h1>
-        <span>{user.professional}</span>
+        <h1 className={classes.mediaName}>
+          {
+            // @ts-ignore
+            user.name
+          }
+        </h1>
+        <span>
+          {
+            // @ts-ignore
+            user.professional
+          }
+        </span>
       </CardContent>
     </Card>
   );
