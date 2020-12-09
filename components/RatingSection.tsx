@@ -33,7 +33,25 @@ export default function RatingSection() {
         />
         <span>5/10</span>
       </div>
+      <span>Domino's Pizza</span>
+      <div className={classes.ratings}>
+        <LinearProgressWithLabel
+          className={classes.ratingProgress}
+          variant="determinate"
+          value={50}
+        />
+        <span>5/10</span>
+      </div>
       <span>KFC</span>
+      <div className={classes.ratings}>
+        <LinearProgressWithLabel
+          className={classes.ratingProgress}
+          variant="determinate"
+          value={50}
+        />
+        <span>5/10</span>
+      </div>
+      <span>Nando's</span>
       <div className={classes.ratings}>
         <LinearProgressWithLabel
           className={classes.ratingProgress}

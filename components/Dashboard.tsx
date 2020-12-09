@@ -10,14 +10,25 @@ import Chart from './Chart';
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      flexGrow: 1,
-      paddingTop: "20px",
+      display: 'flex',
+      flexDirection: 'column'
     },
-    paper: {
+    dataSection: {
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'space-around',
+      alignItems: 'center',
+      marginBottom: 10
+    },
+    content: {
+      color: theme.palette.text.secondary,
       padding: theme.spacing(2),
-      textAlign: 'center',
-      color: theme.palette.text.secondary
+      textAlign: 'center'
     },
+    break: {
+      border: '1px dotted black',
+      width: 'calc(100% - 40px)'
+    }
   }),
 );
 
@@ -25,33 +36,26 @@ export default function Dashboard() {
   const classes = useStyles();
 
   return (
-    <div className={classes.paper}>
-      <Paper elevation={2} >
-        <Grid
-          container
-          spacing={2}
-          direction="row"
-          justify="space-around"
-          alignItems="center"
-        >
-          <Grid item xs={5}>
-            <Paper className={classes.paper}>
-              <Chart/>
-            </Paper>
-          </Grid>
+    <Paper className={classes.root}>
+      <Grid item className={classes.dataSection}>
+        <Grid item xs={5}>
+          <div className={classes.content}>
+            <Chart/>
+          </div>
+        </Grid>
 
-          <Grid item xs={7}>
-            <Paper className={classes.paper}>
-              <RatingSection />
-            </Paper>
-          </Grid>
+        <Grid item xs={7}>
+          <div className={classes.content}>
+            <RatingSection />
+          </div>
         </Grid>
-        <Grid item xs={12}>
-          <Paper className={classes.paper}>
-            <Recommender/>
-          </Paper>
-        </Grid>
-      </Paper>
-    </div>
+      </Grid>
+      <hr className={classes.break} />
+      <Grid item xs={12}>
+        <div className={classes.content}>
+          <Recommender/>
+        </div>
+      </Grid>
+    </Paper>
   );
 }
