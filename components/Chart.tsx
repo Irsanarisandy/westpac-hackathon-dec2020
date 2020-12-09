@@ -9,11 +9,11 @@ export default function Chart() {
 
   const captions = {
     // columns
-    A: 'category 1',
-    B: 'category 2',
-    C: 'category 3',
-    D: 'category 4',
-    E: 'category 5'
+    A: 'income',
+    B: 'credit score',
+    C: 'loyalty points',
+    D: 'net saving',
+    E: 'frequent user'
   };
 
   return (

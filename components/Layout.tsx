@@ -1,3 +1,4 @@
+// @ts-ignore
 import styles from '../styles/layout.module.css';
 
 export default function Layout({

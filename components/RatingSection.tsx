@@ -1,4 +1,7 @@
-import React from 'react';
+// @ts-ignore
+import React, {useContext} from 'react';
+import { UserContext } from '../contexts/user.context';
+
 import { makeStyles } from '@material-ui/core/styles';
 import LinearProgressWithLabel from '@material-ui/core/LinearProgress';
 
@@ -22,54 +25,54 @@ const useStyles = makeStyles({
 
 export default function RatingSection() {
   const classes = useStyles();
-
+  const [user, setUser] = useContext(UserContext);
   return (
     <div className={classes.ratingSection}>
-      <span>Pizza Hut</span>
+      <span>Income</span>
       <div className={classes.ratings}>
         <LinearProgressWithLabel
           className={classes.ratingProgress}
           variant="determinate"
-          value={50}
+          value={user.rating[0].data.A * 100}
         />
-        <span>5/10</span>
+        <span>{user.rating[0].data.A * 100}%</span>
       </div>
 
-      <span>Domino's Pizza</span>
+      <span>credit score</span>
       <div className={classes.ratings}>
         <LinearProgressWithLabel
           className={classes.ratingProgress}
           variant="determinate"
-          value={50}
+          value={user.rating[0].data.B * 100}
         />
-        <span>5/10</span>
+        <span>{user.rating[0].data.B * 100}%</span>
       </div>
-      <span>KFC</span>
+      <span>loyalty points</span>
       <div className={classes.ratings}>
         <LinearProgressWithLabel
           className={classes.ratingProgress}
           variant="determinate"
-          value={50}
+          value={user.rating[0].data.C * 100}
         />
-        <span>5/10</span>
+        <span>{user.rating[0].data.C * 100}%</span>
       </div>
-      <span>Nando's</span>
+      <span>net saving</span>
       <div className={classes.ratings}>
         <LinearProgressWithLabel
           className={classes.ratingProgress}
           variant="determinate"
-          value={50}
+          value={user.rating[0].data.D * 100}
         />
-        <span>5/10</span>
+        <span>{user.rating[0].data.D * 100}%</span>
       </div>
-      <span>McDonalds</span>
+      <span>frequent user</span>
       <div className={classes.ratings}>
         <LinearProgressWithLabel
           className={classes.ratingProgress}
           variant="determinate"
-          value={50}
+          value={user.rating[0].data.E * 100}
         />
-        <span>5/10</span>
+        <span>{user.rating[0].data.E * 100}%</span>
       </div>
     </div>
   );

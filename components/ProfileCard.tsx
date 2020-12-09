@@ -1,3 +1,4 @@
+// @ts-ignore
 import React, { useContext } from 'react';
 import { UserContext } from '../contexts/user.context';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';

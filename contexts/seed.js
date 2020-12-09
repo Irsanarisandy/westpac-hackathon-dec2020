@@ -4,7 +4,7 @@ const Users = [
         name: "Bob Marley",
         age: 25,
         image: "../images/bobmarley.jpg",
-        professional: "Deceased Hippy Artist",
+        professional: "Famous Musician",
         rating: [
             {
                 data: {
@@ -18,10 +18,10 @@ const Users = [
             }
         ],
         recommender:[
-            "recommendation 1",
-            "recommendation 2",
-            "recommendation 3",
-            "recommendation 4",
+            "Platinum Credit Card",
+            "Car insurance",
+            "Business Insurance"
+
         ],
     },
 
@@ -44,11 +44,10 @@ const Users = [
             }
         ],
         recommender:[
-            "recommendation 1",
-            "recommendation 2",
-            "recommendation 3",
-            "recommendation 4",
-            "recommendation 5",
+            "Home Loan for $600k",
+            "Life Insurance",
+            "Car Insurance",
+
         ],
 
     },
@@ -72,11 +71,9 @@ const Users = [
             }
         ],
         recommender:[
-            "recommendation 1",
-            "recommendation 2",
-            "recommendation 3",
-            "recommendation 4",
-            "recommendation 5",
+            "Health Insurance",
+            "Home Loan",
+
         ],
 
     },
