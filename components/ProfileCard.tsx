@@ -19,7 +19,9 @@ const useStyles = makeStyles({
   },
   searchArea: {
     display: 'flex',
-    marginTop: 5
+    marginTop: 5,
+    marginBottom: 15,
+    paddingLeft: 10
   },
   searchField: {
     width: '100%'
