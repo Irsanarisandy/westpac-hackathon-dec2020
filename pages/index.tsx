@@ -10,13 +10,11 @@ import Dashboard from '../components/Dashboard';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    container:{
-      display:'flex',
-      justify:'center',
-      minHeight: '100vh',
-      alignItems:'center'
-    },
     root: {
+      display: 'flex',
+      minHeight: 'calc(100vh - 20px)',
+      justifyContent: 'center',
+      alignItems: 'center',
       flexGrow: 1,
       margin: 8,
     },
@@ -24,44 +22,31 @@ const useStyles = makeStyles((theme: Theme) =>
       padding: theme.spacing(2),
       textAlign: 'center',
       color: theme.palette.text.secondary,
-      minHeight: '100%',
-
-
+      minHeight: '100%'
     },
   }),
 );
 
-
-export default function Home({ allPostsData }: {
-  allPostsData: {
-    date: string
-    title: string
-    id: string
-  }[]
-}) {
+export default function Home() {
   const classes = useStyles();
 
   return (
-    <div className={classes.container}>
-
     <div className={classes.root}>
       {/* <Paper elevation={2} > */}
-        <Grid
-          container
-          direction="row"
-          justify="space-around"
-          alignItems="center"
-          >
-          <Grid item xs={3}>
-            <ProfileCard />
-          </Grid>
-
-          <Grid item xs={9}>
-            <Dashboard />
-          </Grid>
+      <Grid
+        container
+        direction="row"
+        justify="space-around"
+        alignItems="center"
+      >
+        <Grid item xs={3}>
+          <ProfileCard />
         </Grid>
-      {/* </Paper> */}
-</div>
+
+        <Grid item xs={9}>
+          <Dashboard />
+        </Grid>
+      </Grid>
     </div>
   )
 }
