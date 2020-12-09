@@ -34,13 +34,13 @@ export default function Dashboard() {
           justify="space-around"
           alignItems="center"
         >
-          <Grid item xs={5}>
+          <Grid item xs={6}>
             <Paper className={classes.paper}>
               <Chart/>
             </Paper>
           </Grid>
 
-          <Grid item xs={7}>
+          <Grid item xs={6}>
             <Paper className={classes.paper}>
               <RatingSection />
             </Paper>

@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     root: {
       flexGrow: 1,
-      margin: 10,
+      margin: 8,
     },
     paper: {
       padding: theme.spacing(2),
@@ -52,7 +52,7 @@ export default function Home({ allPostsData }: {
           justify="space-around"
           alignItems="center"
           >
-          <Grid item xs={2}>
+          <Grid item xs={3}>
             <ProfileCard />
           </Grid>
 

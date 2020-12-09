@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { UserContext } from '../contexts/user.context';
+
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 
@@ -19,22 +21,25 @@ const useStyles = makeStyles({
 
 export default function Recommender() {
   const classes = useStyles();
+  const [user, setUser] = useContext(UserContext);
+
 
   return (
     <div className={classes.root}>
-      <Typography variant="h5" component="h2">
+      <Typography variant="h3" component="h2">
         Recommender
       </Typography>
       <Typography className={classes.pos} color="textSecondary">
         some bullshit sits here
       </Typography>
       <ul className={classes.bullet}>
-        <li>
-          well meaning and kindly
-        </li>
-        <li>
-          {'"a benevolent smile"'}
-        </li>
+        {
+          user.recommender.map((recom, idx) =>
+            <li key={idx}>
+              {recom}
+            </li>
+          )
+        }
       </ul>
     </div>
   );

@@ -6,7 +6,8 @@ const useStyles = makeStyles({
   ratingSection: {
     display: 'flex',
     flexDirection: 'column',
-    textAlign: 'left'
+    textAlign: 'left',
+    zIndex:-10,
   },
   ratings: {
     display: 'flex',
@@ -24,6 +25,7 @@ export default function RatingSection() {
 
   return (
     <div className={classes.ratingSection}>
+
       <span>Pizza Hut</span>
       <div className={classes.ratings}>
         <LinearProgressWithLabel
@@ -33,6 +35,7 @@ export default function RatingSection() {
         />
         <span>5/10</span>
       </div>
+
       <span>KFC</span>
       <div className={classes.ratings}>
         <LinearProgressWithLabel
@@ -42,6 +45,27 @@ export default function RatingSection() {
         />
         <span>5/10</span>
       </div>
+
+      <span>McDonalds</span>
+      <div className={classes.ratings}>
+        <LinearProgressWithLabel
+          className={classes.ratingProgress}
+          variant="determinate"
+          value={50}
+        />
+        <span>5/10</span>
+      </div>
+
+      <span>McDonalds</span>
+      <div className={classes.ratings}>
+        <LinearProgressWithLabel
+          className={classes.ratingProgress}
+          variant="determinate"
+          value={50}
+        />
+        <span>5/10</span>
+      </div>
+
       <span>McDonalds</span>
       <div className={classes.ratings}>
         <LinearProgressWithLabel

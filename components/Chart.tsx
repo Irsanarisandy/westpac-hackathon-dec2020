@@ -1,47 +1,44 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { UserContext } from '../contexts/user.context';
 
 import RadarChart from 'react-svg-radar-chart';
 import 'react-svg-radar-chart/build/css/index.css';
 
-export default function Chart(){
+export default function Chart() {
+    const [user, setUser] = useContext(UserContext);
 
-    const data = [
-        {
-            data: {
-                battery: 0.7,
-                design: .8,
-                useful: 0.9,
-                speed: 0.67,
-                weight: 0.8
-            },
-            meta: { color: 'blue' }
-        },
-        {
-            data: {
-                battery: 0.6,
-                design: .85,
-                useful: 0.5,
-                speed: 0.6,
-                weight: 0.7
-            },
-            meta: { color: 'red' }
-        }
-    ];
 
     const captions = {
         // columns
-        battery: 'Battery Capacity',
-        design: 'Design',
-        useful: 'Usefulness',
-        speed: 'Speed',
-        weight: 'Weight'
+        A: 'category 1',
+        B: 'category 2',
+        C: 'category 3',
+        D: 'category 4',
+        E: 'category 5'
     };
 
     return (
-        <RadarChart
-            captions={captions}
-            data={data}
-            size={450}
-        />
+        <div style={{ display: "inline-block", zIndex: 10 }}>
+
+            <RadarChart
+                captions={captions}
+                data={user.rating}
+                size={450}
+            />
+        </div>
     )
 }
+
+// Data Format:
+// const data = [
+//     {
+//         data: {
+//             A: 0.7,
+//             B: .8,
+//             C: 0.9,
+//             D: 0.67,
+//             E: 0.8
+//         },
+//         meta: { color: 'blue' }
+//     },
+// ];
