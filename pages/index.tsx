@@ -1,23 +1,12 @@
-import Head from 'next/head';
-import Layout, { siteTitle } from '../components/layout';
-import utilStyles from '../styles/utils.module.css';
-import { getSortedPostsData } from '../lib/posts';
-import Link from 'next/link';
-import Date from '../components/date';
 import { GetStaticProps } from 'next';
-
-
-
 import React from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
-
+import { getSortedPostsData } from '../lib/posts';
 import ProfileCard from '../components/ProfileCard';
-import Dashboard from '../components/dashboard';
-
-
+import Dashboard from '../components/Dashboard';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -46,14 +35,12 @@ export default function Home({ allPostsData }: {
   return (
     <div className={classes.root}>
       <Paper elevation={2} >
-
         <Grid
           container
           direction="row"
           justify="space-around"
           alignItems="center"
         >
-
           <Grid item xs={2}>
             <ProfileCard />
           </Grid>
@@ -61,7 +48,6 @@ export default function Home({ allPostsData }: {
           <Grid item xs={9}>
             <Dashboard />
           </Grid>
-
         </Grid>
       </Paper>
     </div>
@@ -76,4 +62,3 @@ export const getStaticProps: GetStaticProps = async () => {
     }
   }
 }
-
