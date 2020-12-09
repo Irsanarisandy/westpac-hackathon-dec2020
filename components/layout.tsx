@@ -19,11 +19,7 @@ export default function Layout({
 }) {
   return (
     <>
-      <Navbar />
-      <TemporaryDrawer />
 
-
-      
       <div className={styles.container}>
 
         <Head>
