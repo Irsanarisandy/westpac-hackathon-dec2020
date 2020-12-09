@@ -10,13 +10,22 @@ import Dashboard from '../components/Dashboard';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
+    container:{
+      display:'flex',
+      justify:'center',
+      minHeight: '100vh',
+      alignItems:'center'
+    },
     root: {
       flexGrow: 1,
+      margin: 10,
     },
     paper: {
       padding: theme.spacing(2),
       textAlign: 'center',
       color: theme.palette.text.secondary,
+      minHeight: '100%',
+
 
     },
   }),
@@ -33,14 +42,16 @@ export default function Home({ allPostsData }: {
   const classes = useStyles();
 
   return (
+    <div className={classes.container}>
+
     <div className={classes.root}>
-      <Paper elevation={2} >
+      {/* <Paper elevation={2} > */}
         <Grid
           container
           direction="row"
           justify="space-around"
           alignItems="center"
-        >
+          >
           <Grid item xs={2}>
             <ProfileCard />
           </Grid>
@@ -49,7 +60,8 @@ export default function Home({ allPostsData }: {
             <Dashboard />
           </Grid>
         </Grid>
-      </Paper>
+      {/* </Paper> */}
+</div>
     </div>
   )
 }

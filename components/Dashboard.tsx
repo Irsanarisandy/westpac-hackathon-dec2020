@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 
 import RatingSection from './RatingSection';
 import Recommender from './Recommender';
+import Chart from './Chart';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -35,6 +36,7 @@ export default function Dashboard() {
         >
           <Grid item xs={5}>
             <Paper className={classes.paper}>
+              <Chart/>
             </Paper>
           </Grid>
 
