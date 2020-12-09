@@ -36,35 +36,12 @@ export default function Dashboard() {
   const classes = useStyles();
 
   return (
-<<<<<<< HEAD
-    <div className={classes.paper}>
-      <Paper elevation={2} >
-        <Grid
-          container
-          spacing={2}
-          direction="row"
-          justify="space-around"
-          alignItems="center"
-        >
-          <Grid item xs={6}>
-            <Paper className={classes.paper}>
-              <Chart/>
-            </Paper>
-          </Grid>
-
-          <Grid item xs={6}>
-            <Paper className={classes.paper}>
-              <RatingSection />
-            </Paper>
-          </Grid>
-=======
     <Paper className={classes.root}>
       <Grid item className={classes.dataSection}>
         <Grid item xs={5}>
           <div className={classes.content}>
             <Chart/>
           </div>
->>>>>>> d9253044e7d5cb2adfb7f5eec0f3f9ef8399ea3b
         </Grid>
 
         <Grid item xs={7}>
