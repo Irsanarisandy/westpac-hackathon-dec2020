@@ -1,16 +1,16 @@
 // @ts-ignore
 import React, {useContext} from 'react';
-import { UserContext } from '../contexts/user.context';
-
-import { makeStyles } from '@material-ui/core/styles';
 import LinearProgressWithLabel from '@material-ui/core/LinearProgress';
+import { makeStyles } from '@material-ui/core/styles';
+
+import { UserContext } from '../contexts/user.context';
+import { Captions } from '../contexts/seed';
 
 const useStyles = makeStyles({
   ratingSection: {
     display: 'flex',
     flexDirection: 'column',
-    textAlign: 'left',
-    zIndex:-10,
+    textAlign: 'left'
   },
   ratings: {
     display: 'flex',
@@ -28,7 +28,7 @@ export default function RatingSection() {
   const [user, setUser] = useContext(UserContext);
   return (
     <div className={classes.ratingSection}>
-      <span>Income</span>
+      <span>{Captions.A}</span>
       <div className={classes.ratings}>
         <LinearProgressWithLabel
           className={classes.ratingProgress}
@@ -43,8 +43,7 @@ export default function RatingSection() {
           }%
         </span>
       </div>
-
-      <span>credit score</span>
+      <span>{Captions.B}</span>
       <div className={classes.ratings}>
         <LinearProgressWithLabel
           className={classes.ratingProgress}
@@ -59,7 +58,7 @@ export default function RatingSection() {
           }%
         </span>
       </div>
-      <span>loyalty points</span>
+      <span>{Captions.C}</span>
       <div className={classes.ratings}>
         <LinearProgressWithLabel
           className={classes.ratingProgress}
@@ -74,7 +73,7 @@ export default function RatingSection() {
           }%
         </span>
       </div>
-      <span>net saving</span>
+      <span>{Captions.D}</span>
       <div className={classes.ratings}>
         <LinearProgressWithLabel
           className={classes.ratingProgress}
@@ -89,7 +88,7 @@ export default function RatingSection() {
           }%
         </span>
       </div>
-      <span>frequent user</span>
+      <span>{Captions.E}</span>
       <div className={classes.ratings}>
         <LinearProgressWithLabel
           className={classes.ratingProgress}

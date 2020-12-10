@@ -1,7 +1,6 @@
 import { GetStaticProps } from 'next';
 import React from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
 import { getSortedPostsData } from '../lib/posts';
@@ -16,14 +15,8 @@ const useStyles = makeStyles((theme: Theme) =>
       justifyContent: 'center',
       alignItems: 'center',
       flexGrow: 1,
-      margin: 8,
-    },
-    paper: {
-      padding: theme.spacing(2),
-      textAlign: 'center',
-      color: theme.palette.text.secondary,
-      minHeight: '100%'
-    },
+      margin: 10,
+    }
   }),
 );
 
@@ -32,11 +25,9 @@ export default function Home() {
 
   return (
     <div className={classes.root}>
-      {/* <Paper elevation={2} > */}
       <Grid
         container
         direction="row"
-        justify="space-around"
         alignItems="center"
       >
         <Grid item xs={3}>
@@ -48,7 +39,7 @@ export default function Home() {
         </Grid>
       </Grid>
     </div>
-  )
+  );
 }
 
 export const getStaticProps: GetStaticProps = async () => {

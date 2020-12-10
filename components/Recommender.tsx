@@ -26,8 +26,8 @@ export default function Recommender() {
 
   return (
     <div className={classes.root}>
-      <Typography variant="h3" component="h2">
-        Recommender
+      <Typography variant="h3" component="h3">
+        Recommended
       </Typography>
       <ul className={classes.bullet}>
         {
