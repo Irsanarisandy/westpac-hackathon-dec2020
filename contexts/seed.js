@@ -27,7 +27,7 @@ const Users = [
 
     {
         id: 2,
-        name: "User 2 Name",
+        name: "Daniel Smitt",
         age: 28,
         image: "../images/user2.jpg",
         professional: "Web Developer",
@@ -54,7 +54,7 @@ const Users = [
 
     {
         id: 3,
-        name: "User 3 Name",
+        name: "Jennifer Lopez",
         age: 28,
         image: "../images/user3.jpg",
         professional: "Manager",
