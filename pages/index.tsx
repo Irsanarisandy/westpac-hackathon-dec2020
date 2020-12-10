@@ -29,12 +29,13 @@ export default function Home() {
         container
         direction="row"
         alignItems="center"
+        spacing={3}
       >
-        <Grid item xs={3}>
+        <Grid item xs={12} sm={4} md={3}>
           <ProfileCard />
         </Grid>
 
-        <Grid item xs={9}>
+        <Grid item xs={12} sm={8} md={9}>
           <Dashboard />
         </Grid>
       </Grid>

@@ -17,7 +17,8 @@ const useStyles = makeStyles((theme: Theme) =>
       border: '1px solid rgba(207,207,207,1)',
       borderRadius: 10,
       boxShadow: '9px 9px 5px 0px rgba(207,207,207,1)',
-      maxWidth: 300,
+      // maxWidth: 300,
+      height: '70vh'
     },
     searchArea: {
       display: 'flex',

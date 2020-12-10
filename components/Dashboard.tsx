@@ -36,13 +36,13 @@ export default function Dashboard() {
 
   return (
     <Paper className={classes.root}>
-      <Grid item className={classes.dataSection}>
-        <Grid item xs={5}>
+      <Grid item className={classes.dataSection} spacing={2}>
+        <Grid item xs={12} sm={6}>
           <div className={classes.content}>
-            <Chart/>
+            <Chart />
           </div>
         </Grid>
-        <Grid item xs={7}>
+        <Grid item xs={12} sm={6}>
           <div className={classes.content}>
             <RatingSection />
           </div>
@@ -51,7 +51,7 @@ export default function Dashboard() {
       <hr className={classes.break} />
       <Grid item xs={12}>
         <div className={classes.content}>
-          <Recommender/>
+          <Recommender />
         </div>
       </Grid>
     </Paper>

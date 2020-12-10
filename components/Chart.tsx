@@ -14,7 +14,7 @@ export default function Chart() {
         captions={Captions}
         // @ts-ignore
         data={user.rating}
-        size={450}
+        size={350}
       />
     </div>
   );
