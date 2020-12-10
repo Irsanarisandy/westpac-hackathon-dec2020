@@ -17,7 +17,8 @@ const useStyles = makeStyles((theme: Theme) =>
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'space-around',
-      alignItems: 'center'
+      alignItems: 'center',
+      marginBottom: 10
     },
     content: {
       color: theme.palette.text.secondary,
@@ -36,7 +37,15 @@ export default function Dashboard() {
 
   return (
     <Paper className={classes.root}>
-      <Grid item className={classes.dataSection} spacing={2}>
+
+      <Grid
+        container
+        direction="row"
+        justify="space-around"
+        alignItems="center"
+        className={classes.dataSection}
+        spacing={2}
+      >
         <Grid item xs={12} sm={6}>
           <div className={classes.content}>
             <Chart />
@@ -48,6 +57,7 @@ export default function Dashboard() {
           </div>
         </Grid>
       </Grid>
+
       <hr className={classes.break} />
       <Grid item xs={12}>
         <div className={classes.content}>
